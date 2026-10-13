@@ -368,7 +368,7 @@ VIEWS.overview = el => {
   const expired = D.patents.filter(p => p.sb === 'Expired / lapsed').length;
   const stateTotal = D.priority.reduce((a, d) => a + d.state, 0);
   const crit = D.matrix.flat().filter(v => v === 5).length;
-  el.innerHTML = head('The argument', 'World-class research, and no machinery behind it',
+  el.innerHTML = head('The argument', 'A History of Meaningful Research with Little Capital or Infrastructure',
     'Utah spent decades building water research capability. What it never built is the pipeline that turns that research into companies, pilots and deployed technology. Every gap in this assessment is organizational or financial; none is a capability problem. This atlas is the evidence, and it is built to be maintained rather than read once.')
     + nums([
       [D.people.length, 'named water researchers, nine institutions'],
