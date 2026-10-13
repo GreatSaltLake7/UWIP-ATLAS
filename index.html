@@ -370,6 +370,10 @@ VIEWS.overview = el => {
   const crit = D.matrix.flat().filter(v => v === 5).length;
   el.innerHTML = head('The argument', 'A History of Meaningful Research with Little Capital or Infrastructure',
     'Utah spent decades building water research capability. What it has yet to build is the pipeline that turns that research into companies, pilots and deployed technology. Encouragingly, every gap identified here is organizational or financial rather than a question of research capability. This atlas is offered as a shared, living reference — meant to be maintained and returned to, not read once.')
+    + `<div class="card" style="border-left:4px solid var(--teal);background:#F3F7F6;margin-bottom:4px">
+        <div class="kicker" style="color:var(--teal)">A note to Utah's research community and partners</div>
+        <p style="font-size:13px;line-height:1.62;margin:8px 0 0;color:var(--ink)">Utah's water researchers have built, over decades and often with modest support, a body of work that stands with anyone's. This atlas is written in that spirit — as a set of recommendations and shared opportunities, not a scorecard. Where it notes something missing, it points to a role no one has yet been asked to fill, not a shortfall of the people doing the work. The aim is simple: to make it easier to turn excellent research into companies, pilots and deployed technology that stay in Utah.</p>
+      </div>`
     + nums([
       [D.people.length, 'named water researchers, nine institutions'],
       [D.orgs.length, 'companies, units, operators and agencies'],
@@ -410,7 +414,7 @@ VIEWS.overview = el => {
 let alPin = null;
 VIEWS.domains = el => {
   el.innerHTML = head('Deliverable 1', 'Priority domains, and what sits behind each',
-    'Six domains scored on impact, feasibility and Utah research fit. Plotted against the named researchers, patent records and state dollars behind each. This is the only view that joins all four source files, showing each domain's strengths and opportunities side by side.')
+    'Six domains scored on impact, feasibility and Utah research fit. Plotted against the named researchers, patent records and state dollars behind each. This is the only view that joins all four source files, showing the strengths and opportunities of each domain side by side.')
     + `<div class="ctrls">
         <div class="ctrl"><span>Horizontal axis</span><div class="seg" id="alX">
           <button data-v="researchers" aria-pressed="true">Researchers</button>
